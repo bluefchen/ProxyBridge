@@ -9,6 +9,15 @@ extension View {
             self
         }
     }
+
+    @ViewBuilder
+    func adaptiveFontWeight(_ weight: Font.Weight) -> some View {
+        if #available(macOS 13.0, *) {
+            self.fontWeight(weight)
+        } else {
+            self.font(.system(size: NSFont.systemFontSize, weight: weight))
+        }
+    }
 }
 
 extension Scene {
@@ -21,11 +30,14 @@ extension Scene {
         }
     }
 
-    func adaptiveWindowResizability() -> some Scene {
+    func adaptiveWindowResizability(_ mode: Any) -> some Scene {
+        #if canImport(SwiftUI)
         if #available(macOS 13.0, *) {
-            return self.windowResizability(.contentSize)
-        } else {
-            return self
+            if let resizabilityMode = mode as? WindowResizability {
+                return self.windowResizability(resizabilityMode)
+            }
         }
+        #endif
+        return self
     }
 }

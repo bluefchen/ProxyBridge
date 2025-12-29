@@ -13,7 +13,7 @@ struct ProxyBridgeGUIApp: App {
                     checkForUpdatesOnStartup()
                 }
         }
-        .windowStyle(.hiddenTitleBar)
+        .windowStyle(TitleBarWindowStyle()) 
         .commands {
             CommandGroup(replacing: .newItem) { }
             
@@ -41,31 +41,6 @@ struct ProxyBridgeGUIApp: App {
                 }
             }
         }
-        
-        Window("Proxy Settings", id: "proxy-settings") {
-            ProxySettingsView(viewModel: viewModel)
-        }
-        .adaptiveWindowResizability()(.contentSize)
-        .adaptiveDefaultPosition(.center)
-        
-        Window("Proxy Rules", id: "proxy-rules") {
-            ProxyRulesView(viewModel: viewModel)
-                .frame(width: 700, height: 500)
-        }
-        .adaptiveWindowResizability()(.contentSize)
-        .adaptiveDefaultPosition(.center)
-        
-        Window("About ProxyBridge", id: "about") {
-            AboutView()
-        }
-        .adaptiveWindowResizability()(.contentSize)
-        .adaptiveDefaultPosition(.center)
-        
-        Window("Check for Updates", id: "update-check") {
-            UpdateCheckView()
-        }
-        .adaptiveWindowResizability()(.contentSize)
-        .adaptiveDefaultPosition(.center)
     }
     
     private func openProxySettingsWindow() {
