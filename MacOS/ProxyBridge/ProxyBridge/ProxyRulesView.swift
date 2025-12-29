@@ -443,7 +443,7 @@ struct RuleEditorView: View {
                     }
                 }
             }
-            .formStyle(if #available(macOS 13.0, *) { .grouped } else { .automatic })
+            .adaptiveFormStyle()
             
             HStack {
                 Button("Cancel") {
