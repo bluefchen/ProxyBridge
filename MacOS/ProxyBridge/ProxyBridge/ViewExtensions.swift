@@ -10,3 +10,14 @@ extension View {
         }
     }
 }
+
+extension Scene {
+    @SceneBuilder
+    func adaptiveDefaultPosition(_ position: UnitPoint) -> some Scene {
+        if #available(macOS 13.0, *) {
+            self.defaultPosition(position)
+        } else {
+            self
+        }
+    }
+}
