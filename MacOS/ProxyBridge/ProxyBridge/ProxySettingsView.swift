@@ -72,7 +72,7 @@ struct ProxySettingsView: View {
                 .padding(.top, 4)
             }
         }
-        .formStyle(.grouped)
+        .formStyle(if #available(macOS 13.0, *) { .grouped } else { .automatic })
     }
     
     private var footerButtons: some View {
