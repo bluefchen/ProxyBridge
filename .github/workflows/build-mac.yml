@@ -36,5 +36,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ProxyBridge-macOS
-        path: MacOS/ProxyBridge/output/ProxyBridge-Installer.pkg
+        path: MacOS/ProxyBridge/output/*.pkg
         retention-days: 30
