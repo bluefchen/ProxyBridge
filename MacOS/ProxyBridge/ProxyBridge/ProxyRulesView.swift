@@ -66,7 +66,7 @@ struct ProxyRulesView: View {
             HStack {
                 Text("Proxy Rules")
                     .font(.title2)
-                    .fontWeight(.semibold)
+                    .adaptiveFontWeight(.semibold)
                 
                 Spacer()
                 
@@ -212,7 +212,7 @@ struct ProxyRulesView: View {
                     TableColumn("Action") { rule in
                         Text(rule.action)
                             .foregroundColor(actionColor(rule.action))
-                            .fontWeight(.semibold)
+                            .adaptiveFontWeight(.semibold)
                     }
                     .width(80)
                 }
@@ -395,7 +395,7 @@ struct RuleEditorView: View {
         VStack(spacing: 20) {
             Text(isEditMode ? "Edit Rule" : "Add Rule")
                 .font(.title2)
-                .fontWeight(.semibold)
+                .adaptiveFontWeight(.semibold)
             
             Form {
                 Section {
@@ -422,7 +422,7 @@ struct RuleEditorView: View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Protocol")
-                            .fontWeight(.medium)
+                            .adaptiveFontWeight(.medium)
                         Picker("", selection: $selectedProtocol) {
                             Text("TCP").tag("TCP")
                             Text("UDP").tag("UDP")
@@ -433,7 +433,7 @@ struct RuleEditorView: View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Action")
-                            .fontWeight(.medium)
+                            .adaptiveFontWeight(.medium)
                         Picker("", selection: $selectedAction) {
                             Text("PROXY").tag("PROXY")
                             Text("DIRECT").tag("DIRECT")
@@ -469,7 +469,7 @@ struct RuleEditorView: View {
     private func formField(label: String, placeholder: String, text: Binding<String>, hint: String) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(label)
-                .fontWeight(.medium)
+                .adaptiveFontWeight(.medium)
             TextField(placeholder, text: text)
                 .textFieldStyle(.roundedBorder)
             Text(hint)

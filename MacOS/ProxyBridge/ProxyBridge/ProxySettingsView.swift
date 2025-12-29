@@ -34,7 +34,7 @@ struct ProxySettingsView: View {
                 .foregroundColor(.accentColor)
             Text("Proxy Settings")
                 .font(.title2)
-                .fontWeight(.semibold)
+                .adaptiveFontWeight(.semibold)
             Spacer()
         }
         .padding()
@@ -134,7 +134,7 @@ struct ProxySettingsView: View {
     private func labelWithRequiredMark(label: String, required: Bool) -> some View {
         HStack {
             Text(label)
-                .fontWeight(.medium)
+                .adaptiveFontWeight(.medium)
             if required {
                 Text("*")
                     .foregroundColor(.red)

@@ -10,7 +10,7 @@ struct UpdateCheckView: View {
             // Header
             Text("Check for Updates")
                 .font(.title2)
-                .fontWeight(.semibold)
+                .adaptiveFontWeight(.semibold)
             
             Divider()
             
@@ -18,7 +18,7 @@ struct UpdateCheckView: View {
             VStack(spacing: 12) {
                 HStack {
                     Text("Current Version:")
-                        .fontWeight(.medium)
+                        .adaptiveFontWeight(.medium)
                     Spacer()
                     Text(viewModel.currentVersion)
                         .foregroundColor(.secondary)
@@ -26,7 +26,7 @@ struct UpdateCheckView: View {
                 
                 HStack {
                     Text("Latest Version:")
-                        .fontWeight(.medium)
+                        .adaptiveFontWeight(.medium)
                     Spacer()
                     Text(viewModel.latestVersion)
                         .foregroundColor(viewModel.latestVersionColor)
@@ -41,7 +41,7 @@ struct UpdateCheckView: View {
                         .foregroundColor(viewModel.statusColor)
                     Text(viewModel.statusMessage)
                         .foregroundColor(viewModel.statusColor)
-                        .fontWeight(.medium)
+                        .adaptiveFontWeight(.medium)
                 }
                 .padding(.horizontal)
             }

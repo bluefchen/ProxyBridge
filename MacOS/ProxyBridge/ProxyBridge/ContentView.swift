@@ -150,7 +150,7 @@ struct ConnectionsView: View {
             monoText("\(connection.destination):\(connection.port)", color: .orange)
             monoText("→", color: .gray)
             monoText(connection.proxy, color: connection.proxy == "Direct" ? .gray : .purple)
-                .fontWeight(.medium)
+                .adaptiveFontWeight(.medium)
         }
         .padding(.horizontal)
         .padding(.vertical, 4)

@@ -21,7 +21,7 @@ struct UpdateNotificationView: View {
                 
                 Text("Update Available")
                     .font(.title2)
-                    .fontWeight(.bold)
+                    .adaptiveFontWeight(.bold)
             }
             
             Divider()
@@ -30,7 +30,7 @@ struct UpdateNotificationView: View {
             VStack(spacing: 10) {
                 HStack {
                     Text("Current Version:")
-                        .fontWeight(.medium)
+                        .adaptiveFontWeight(.medium)
                     Spacer()
                     Text(versionInfo.currentVersion)
                         .foregroundColor(.secondary)
@@ -38,11 +38,11 @@ struct UpdateNotificationView: View {
                 
                 HStack {
                     Text("New Version:")
-                        .fontWeight(.medium)
+                        .adaptiveFontWeight(.medium)
                     Spacer()
                     Text(versionInfo.latestVersion)
                         .foregroundColor(.green)
-                        .fontWeight(.semibold)
+                        .adaptiveFontWeight(.semibold)
                 }
             }
             .padding(.horizontal)
