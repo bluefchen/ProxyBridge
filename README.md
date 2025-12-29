@@ -58,7 +58,7 @@ ProxyBridge is available for both Windows and macOS, with platform-specific impl
 ### 📗 [macOS Documentation](MacOS/README.md)
 - **Technology**: Network Extension framework with transparent proxy
 - **Distribution**: Direct download (.pkg installer) from [Releases](https://github.com/InterceptSuite/ProxyBridge/releases)
-- **Requirements**: macOS 13.0 (Ventura) or later, Apple Silicon (ARM) or Intel
+- **Requirements**: macOS 12.0 (Ventura) or later, Apple Silicon (ARM) or Intel
 - **GUI**: Native SwiftUI interface
 
 ## Screenshots

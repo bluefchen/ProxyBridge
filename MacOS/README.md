@@ -385,7 +385,7 @@ Connection logs are available in the main window, showing:
 
 ### Requirements
 
-- macOS 13.0 or later
+- macOS 12.0 or later
 - Xcode 14.0 or later
 - Swift 5.7 or later
 - Valid Apple Developer account for code signing
