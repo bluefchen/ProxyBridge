@@ -45,26 +45,26 @@ struct ProxyBridgeGUIApp: App {
         Window("Proxy Settings", id: "proxy-settings") {
             ProxySettingsView(viewModel: viewModel)
         }
-        .windowResizability(.contentSize)
+        .adaptiveWindowResizability()(.contentSize)
         .adaptiveDefaultPosition(.center)
         
         Window("Proxy Rules", id: "proxy-rules") {
             ProxyRulesView(viewModel: viewModel)
                 .frame(width: 700, height: 500)
         }
-        .windowResizability(.contentSize)
+        .adaptiveWindowResizability()(.contentSize)
         .adaptiveDefaultPosition(.center)
         
         Window("About ProxyBridge", id: "about") {
             AboutView()
         }
-        .windowResizability(.contentSize)
+        .adaptiveWindowResizability()(.contentSize)
         .adaptiveDefaultPosition(.center)
         
         Window("Check for Updates", id: "update-check") {
             UpdateCheckView()
         }
-        .windowResizability(.contentSize)
+        .adaptiveWindowResizability()(.contentSize)
         .adaptiveDefaultPosition(.center)
     }
     

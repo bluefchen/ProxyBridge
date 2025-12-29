@@ -20,4 +20,12 @@ extension Scene {
             self
         }
     }
+
+    func adaptiveWindowResizability() -> some Scene {
+        if #available(macOS 13.0, *) {
+            return self.windowResizability(.contentSize)
+        } else {
+            return self
+        }
+    }
 }
